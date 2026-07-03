@@ -1,0 +1,9 @@
+.calc-pad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+    background-color: var(--calc-grid-bg-clr);
+    padding: 24px;
+    border-radius: 10px;
+    width: clamp(327px, 100%, 540px);
+}

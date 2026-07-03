@@ -1,0 +1,11 @@
+.calc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--calc-title-clr);
+    padding: 0 20px;
+}
+
+.calc-header h1 {
+    font-size: 2rem;
+}

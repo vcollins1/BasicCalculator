@@ -1,0 +1,36 @@
+.calc-btn {
+    height: 64px;
+    background-color: var(--primary-btn-bg-clr);
+    font-size: 2rem;
+    color: var(--primary-btn-clr);
+    border: none;
+    border-radius: var(--btn-radius);
+    box-shadow: inset 0 -5px 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.2s;
+    text-transform: uppercase;
+    font-family: inherit;
+    
+    &:hover {
+        cursor: pointer;
+    }
+    
+    &:active {
+        box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.5);
+    }
+}
+
+.secondary-btn {
+    background-color: var(--secondary-btn-bg-clr);
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.span-two {
+    grid-column: span 2;
+    width: 100%;
+}
+
+.equal-btn {
+    background-color: var(--slider-pill-bg-clr);
+    color: var(--white);
+}

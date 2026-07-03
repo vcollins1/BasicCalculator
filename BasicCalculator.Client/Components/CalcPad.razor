@@ -1,0 +1,36 @@
+@using System.Text
+
+<div class="calc-pad">
+    @foreach (var btn in _buttons)
+    {
+        <CalcButton CalcBtnText=@btn Class=@GetClassString(btn)/>
+    }
+</div>
+
+@code {
+    private readonly string[] _number = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
+    private readonly string[] _buttons =
+    {
+        "7", "8", "9", "del",
+        "4", "5", "6", "+",
+        "1", "2", "3", "-",
+        ".", "0", "/", "x",
+        "reset", "="
+    };
+
+    private string? GetClassString(string value)
+    {
+        var cls = new StringBuilder();
+        if (value == "reset" || value == "=")
+        {
+            cls.Append("span-two ");
+            if (value == "=")
+                cls.Append(" equal-btn");
+        }
+
+        if (value == "del" || value == "reset")
+            cls.Append("secondary-btn");
+
+        return cls.ToString();
+    }
+}
