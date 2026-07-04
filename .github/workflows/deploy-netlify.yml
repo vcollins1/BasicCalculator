@@ -20,10 +20,10 @@ jobs:
           dotnet-version: 10.0.x
 
       - name: Restore .NET workloads
-        run: dotnet workload restore BasicCalculator/BasicCalculator.csproj
+        run: dotnet workload restore BasicCalculator.Client/BasicCalculator.Client.csproj
 
       - name: Publish Blazor WebAssembly app
-        run: dotnet publish BasicCalculator/BasicCalculator.csproj -c Release -o publish
+        run: dotnet publish BasicCalculator.Client/BasicCalculator.Client.csproj -c Release -o publish
 
       - name: Install Netlify CLI
         run: npm install -g netlify-cli

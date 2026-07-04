@@ -1,6 +1,6 @@
 [build]
 ignore = "exit 0"
-command = "dotnet publish BasicCalculator/BasicCalculator.csproj -c Release -o publish"
+command = "dotnet publish BasicCalculator.Client/BasicCalculator.Client.csproj -c Release -o publish"
 publish = "publish/wwwroot"
 
 [[redirects]]
