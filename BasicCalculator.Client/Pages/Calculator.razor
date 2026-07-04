@@ -5,8 +5,12 @@
     <div class="calculator">
         <CalcHeader />
         <div class="calc-main">
-            <CalcDisplay/>
-            <CalcPad/>
+            <CalcDisplay CalcValue="@PressedKey"/>
+            <CalcPad @bind-CurrentKey="PressedKey"/>
         </div>
     </div>
 </main>
+
+@code {
+    private string PressedKey { get; set; } = "";
+}

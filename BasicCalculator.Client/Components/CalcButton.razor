@@ -1,6 +1,8 @@
-<button class="calc-btn @Class">@CalcBtnText</button>
+<button class="calc-btn @Class" @onclick="OnBtnClick">@CalcBtnText</button>
 
 @code {
     [Parameter] public string CalcBtnText { get; set; } = "";
     [Parameter] public string Class { get; set; } = "";
+    
+    [Parameter] public EventCallback OnBtnClick { get; set; }
 }
