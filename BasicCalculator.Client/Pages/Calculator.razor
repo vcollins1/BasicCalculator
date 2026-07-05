@@ -28,5 +28,8 @@
                 ? key
                 : $"{_displayValue}{key}";
         }
+
+        if (key == "del")
+            _displayValue = _displayValue.Length == 1 ? "0" : _displayValue[..^1];
     }
 }
