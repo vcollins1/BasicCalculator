@@ -5,12 +5,28 @@
     <div class="calculator">
         <CalcHeader />
         <div class="calc-main">
-            <CalcDisplay CalcValue="@PressedKey"/>
-            <CalcPad @bind-CurrentKey="PressedKey"/>
+            <CalcDisplay CalcValue="@_displayValue"/>
+            <CalcPad CurrentKey="@_pressedKey" CurrentKeyChanged="HandleKeyPressed"/>
         </div>
     </div>
 </main>
 
 @code {
-    private string PressedKey { get; set; } = "";
+    private readonly string[] _numbers = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+    private string _pressedKey = "";
+    private string _displayValue = "0";
+    private int _dotCount = 0;
+
+    private void HandleKeyPressed(string key)
+    {
+        _pressedKey = key;
+
+        if (_numbers.Contains(key) || (key == "." && _dotCount < 1))
+        {
+            _dotCount = key == "." ? _dotCount + 1 : _dotCount;
+            _displayValue = _displayValue == "0"
+                ? key
+                : $"{_displayValue}{key}";
+        }
+    }
 }
