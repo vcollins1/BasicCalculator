@@ -16,7 +16,6 @@
     private readonly string[] _operators = { "+", "-", "/", "x" };
     private string _pressedKey = "";
     private string _displayValue = "0";
-    private int _dotCount = 0;
     
     // calculator state
     private string _previousValue = "";
@@ -26,13 +25,13 @@
     {
         _pressedKey = key;
 
-        if (_numbers.Contains(key) || (key == "." && _dotCount < 1))
-        {
-            _dotCount = key == "." ? _dotCount + 1 : _dotCount;
+        if (_numbers.Contains(key))
             _displayValue = _displayValue == "0"
                 ? key
                 : $"{_displayValue}{key}";
-        }
+
+        if (key == "." && !_displayValue.Contains("."))
+            _displayValue += key;
 
         if (key == "del")
             _displayValue = _displayValue.Length == 1 ? "0" : _displayValue[..^1];
