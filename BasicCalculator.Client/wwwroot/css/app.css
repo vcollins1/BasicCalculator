@@ -11,6 +11,7 @@
     --primary-btn-clr: #434A59;
     --primary-bg-clr: #3A4663;
     --calc-display-bg-clr: #181F33;
+    --calc-display-clr: #fff;
     --calc-grid-bg-clr: #242D44;
     --slider-pill-bg-clr: #D03F2F;
     --calc-title-clr: #fff;
@@ -22,6 +23,7 @@
     --primary-btn-clr: #36362C;
     --primary-bg-clr: #E6E6E6;
     --calc-display-bg-clr: #EEEEEE;
+    --calc-display-clr: #36362C;
     --calc-grid-bg-clr: #D2CDCD;
     --slider-pill-bg-clr: #C85402;
     --calc-title-clr: #36362C;
@@ -33,6 +35,7 @@
     --primary-btn-clr: #FFE53D;
     --primary-bg-clr: #17062A;
     --calc-display-bg-clr: #1E0936;
+    --calc-display-clr: #FFE53D;
     --calc-grid-bg-clr: #1E0936;
     --slider-pill-bg-clr: #00DED0;
     --calc-title-clr: #FFE53D;
