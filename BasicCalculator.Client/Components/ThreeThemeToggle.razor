@@ -1,11 +1,14 @@
 <div class="toggle-container">
-    <input type="radio" id="option-1" name="triple-toggle" checked>
+    <input type="radio" id="option-1" name="triple-toggle" checked="@(SelectedTheme == "option-1")" 
+           @onchange="@(() => OnSelectedThemeChanged("option-1"))">
     @* <label for="option-1">1</label> *@
 
-    <input type="radio" id="option-2" name="triple-toggle">
+    <input type="radio" id="option-2" name="triple-toggle" checked="@(SelectedTheme == "option-2")" 
+           @onchange="@(() => OnSelectedThemeChanged("option-2"))">
     @* <label for="option-2">2</label> *@
 
-    <input type="radio" id="option-3" name="triple-toggle">
+    <input type="radio" id="option-3" name="triple-toggle" checked="@(SelectedTheme == "option-3")" 
+           @onchange="@(() => OnSelectedThemeChanged("option-3"))">
     @* <label for="option-3">3</label> *@
   
     <!-- This element serves as the animated sliding pill background -->
@@ -13,5 +16,14 @@
 </div>
 
 @code {
+    [Parameter] public string SelectedTheme { get; set; } = "option-1";
+    [Parameter] public EventCallback<string> SelectedThemeChanged { get; set; }
+
+    private async Task OnSelectedThemeChanged(string theme)
+    {
+        SelectedTheme = theme;
+        await SelectedThemeChanged.InvokeAsync(theme);
+    }
+    
     
 }

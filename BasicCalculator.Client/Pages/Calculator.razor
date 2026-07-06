@@ -2,11 +2,11 @@
 @using BasicCalculator.Client.Components
 
 <main>
-    <div class="calc-container" data-theme="">
+    <div class="calc-container" data-theme="@_theme">
         <div class="calculator">
-            <CalcHeader/>
+            <CalcHeader CurrentTheme="SetTheme"/>
             <div class="calc-main">
-                <CalcDisplay CalcValue="@_displayValue"/>
+                <CalcDisplay CalcValue="@_displayValue" />
                 <CalcPad CurrentKey="@_pressedKey" CurrentKeyChanged="HandleKeyPressed"/>
             </div>
         </div>

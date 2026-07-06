@@ -5,6 +5,7 @@ namespace BasicCalculator.Client.Pages;
 
 public partial class Calculator : ComponentBase
 {
+    private string _theme = "option-1";
     private readonly string[] _numbers = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
     private readonly string[] _operators = { "+", "-", "/", "x" };
 
@@ -12,6 +13,11 @@ public partial class Calculator : ComponentBase
     private string _displayValue = "0";
     private string _previousValue = "";
     private string _operation = "";
+
+    private void SetTheme(string theme)
+    {
+        _theme = theme;
+    }
 
     private void HandleKeyPressed(string key)
     {
