@@ -43,6 +43,10 @@
 
 body {
     font-family: "League Spartan", sans-serif;
+}
+
+.calc-container {
+    height: 100vh;
     background-color: var(--primary-bg-clr);
 }
 
