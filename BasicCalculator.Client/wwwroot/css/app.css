@@ -16,6 +16,28 @@
     --calc-title-clr: #fff;
 }
 
+[data-theme="option-2"] {
+    --primary-btn-bg-clr: #E5E4E1;
+    --secondary-btn-bg-clr: #378187;
+    --primary-btn-clr: #36362C;
+    --primary-bg-clr: #E6E6E6;
+    --calc-display-bg-clr: #EEEEEE;
+    --calc-grid-bg-clr: #D2CDCD;
+    --slider-pill-bg-clr: #C85402;
+    --calc-title-clr: #36362C;
+}
+
+[data-theme="option-3"] {
+    --primary-btn-bg-clr: #331C4D;
+    --secondary-btn-bg-clr: #56077C;
+    --primary-btn-clr: #FFE53D;
+    --primary-bg-clr: #17062A;
+    --calc-display-bg-clr: #1E0936;
+    --calc-grid-bg-clr: #1E0936;
+    --slider-pill-bg-clr: #00DED0;
+    --calc-title-clr: #FFE53D;
+}
+
 body {
     font-family: "League Spartan", sans-serif;
     background-color: var(--primary-bg-clr);
